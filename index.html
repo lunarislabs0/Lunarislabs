@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ahmed — Développeur iOS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f2eb;
+      --ink: #1a1a18;
+      --muted: #7a7668;
+      --accent: #2d5a3d;
+      --line: #d4cfc4;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Mono', monospace;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+    }
+
+    /* Top bar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 0 1.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      letter-spacing: 0.01em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .badge {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* Hero */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5vh 0;
+      max-width: 780px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.4rem;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 1.05;
+      color: var(--ink);
+      margin-bottom: 2rem;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .description {
+      font-size: 0.92rem;
+      line-height: 1.9;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 3rem;
+    }
+
+    /* Tags */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      color: var(--ink);
+      background: transparent;
+      transition: all 0.2s;
+    }
+
+    .tag:hover {
+      background: var(--ink);
+      color: var(--bg);
+      border-color: var(--ink);
+    }
+
+    /* Contact */
+    .contact-line {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .contact-line a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 1px;
+      transition: opacity 0.2s;
+    }
+
+    .contact-line a:hover { opacity: 0.6; }
+
+    .sep { color: var(--line); }
+
+    /* Footer */
+    footer {
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--line);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Animated entry */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .eyebrow { animation: fadeUp 0.5s ease both; }
+    h1       { animation: fadeUp 0.5s 0.1s ease both; }
+    .description { animation: fadeUp 0.5s 0.2s ease both; }
+    .tags    { animation: fadeUp 0.5s 0.3s ease both; }
+    .contact-line { animation: fadeUp 0.5s 0.4s ease both; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="logo" href="#">Ahmed</a>
+    <span class="badge">iOS Developer</span>
+  </header>
+
+  <main>
+    <p class="eyebrow">Développeur indépendant · France</p>
+    <h1>Applications<br><em>iOS</em> &amp; Swift</h1>
+    <p class="description">
+      Je conçois et développe des applications mobiles natives pour iPhone et iPad.
+      Mon approche allie rigueur fonctionnelle et expérience utilisateur soignée,
+      au service d'outils utiles au quotidien.
+    </p>
+
+    <div class="tags">
+      <span class="tag">Swift</span>
+      <span class="tag">SwiftUI</span>
+      <span class="tag">UIKit</span>
+      <span class="tag">Xcode</span>
+      <span class="tag">App Store Connect</span>
+    </div>
+
+    <div class="contact-line">
+      <span>Contact</span>
+      <span class="sep">|</span>
+      <!-- Remplace par ton vrai email -->
+      <a href="mailto:ton@email.com">ton@email.com</a>
+    </div>
+  </main>
+
+  <footer>
+    <span>© 2026 Ahmed</span>
+    <span>France</span>
+  </footer>
+
+</body>
+</html>
